@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myTravel</title>
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js\script.js" defer></script>
     <style>
     </style>
 </head>
 <body>
-    <header class="header-wrapper">
+    <header>
         <nav>
-            <ul>
-                <li><a href="#" onclick="showPage('home')">Home</a></li>
-                <li><a href="#" onclick="showPage('about')">About Us</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-            </ul>
-        </nav>
+                <div class="icon-bar">
+                    <a class="active" href="#"><i class="fa fa-home"></i></a>
+                    <a href="#"><i class="fa fa-search"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                    <a href="#"><i class="fa fa-globe"></i></a>
+                    <a href="#"><i class="fa fa-trash"></i></a>
+                  </div>
     </header>
     
     <div id="home" class="page">
@@ -68,7 +70,7 @@
             </div>
 
             <div class="testimonial">
-                    <p>"Liburan sendiri?no worry karena ditemani myTravel."</p>
+                    <p>"Liburan nyaman dan tenang karena ditemani myTravel."</p>
                     <p><strong>Florence Hughes</strong><br>Ibu Rumah Tangga, 28</p> 
             </div>
 

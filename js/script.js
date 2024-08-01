@@ -27,21 +27,21 @@ let slideIndex = 0;
     }
 
     function validateForm() {
-        // Get form elements
+       
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
         let errorMessage = document.getElementById("error-message");
     
-        // Clear previous error message
+        
         errorMessage.innerHTML = "";
     
-        // Validate name
+       
         if (name === "") {
             errorMessage.innerHTML = "Name is required.";
             return false;
         }
     
-        // Validate email
+        
         if (email === "") {
             errorMessage.innerHTML = "Email is required.";
             return false;
@@ -53,7 +53,7 @@ let slideIndex = 0;
     }
     
     function validateEmail(email) {
-        // Regular expression to validate email format
+        
         let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     }
