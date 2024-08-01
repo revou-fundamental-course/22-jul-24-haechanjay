@@ -3,10 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <title>myTravel</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script src="js\script.js" defer></script>
+    <style>
+    </style>
 </head>
 <body>
+    <header class="header-wrapper">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <div id="home" class="page">
+        <h1>Home</h1>
+        <p>Welcome to our homepage!</p>
+        <h2>Enjoy your Holiday with myTravel</h2>
+    </div>
+    
+    <div id="about" class="page" style="display:none;">
+        <h1>About Us</h1>
+        <p>This is the About Us page.</p>
+    </div>
+    
+    <div id="contact" class="page" style="display:none;">
+        <h1>Contact</h1>
+        <p>This is the Contact page.</p>
+    </div>
+    
+    <section class="container">
+        <div class="left-section">
+            <div class="slideshow-container">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="image/istockphoto-1076367546-170667a.png" alt="gambar1">
+                        <div class="slide-text">My elder said : "this is such a crazy moments".</div>
+                    </div>
+    
+                    <div class="slide">
+                        <img src="image/istockphoto-1879742551-170667a.png" alt="gambar2">
+                        <div class="slide-text">"thanks for giving me this opportunity, myTravel" </div>
+                    </div>
+    
+                    <div class="slide">
+                        <img src="image/istockphoto-2047264953-170667a.png" alt="gambar3">
+                        <div class="slide-text">"and I can heal my mind for a while"</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+    
+                </div>
+                <br>
+    
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <div class="testimonial">
+                    <p>"Liburan sendiri?no worry karena ditemani myTravel."</p>
+                    <p><strong>Florence Hughes</strong><br>Ibu Rumah Tangga, 28</p> 
+            </div>
+
+            <div class="features">
+                <p> Why Should myTravel?</p>
+                <ul class="featurtes">
+                    <li>No.1 Travel Terbaik di Indonesia untuk Jalan-jalan ke luar negeri</li>
+                    <li>Kemudahan dan Kenyamanan dalam Satu Paket</li>
+                    <li>Harga Terbaik untuk Perjalanan Terbaik</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="right-section">
+            <h2>Contact Us</h2>
+            <p>Admin akan menghubungi anda dalam waktu 1x24 jam setelah data kami terima.</p>
+            <form id="contactus" onsubmit="return validateForm()">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="First and last name">
+                    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com">
+                    
+                <label for="interest">What are you interested in?</label>
+                <select id="interest" name="interest">
+                    <option value="option1">Select option</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+                    
+                <button type="submit">SEND</button>
+            </form>       
+            <p id="error-message" style="color:red;"></p>
+            <script src="C:\Users\DELL\Documents\New folder\script.js"></script>
+        </div>   
+    </section>
+
+    <section class="our-package">
+        <h1>Our Package</h1>
+    
+            <div class="package-row">
+                <div class="package" id="italia">
+                    <h2> Italia</h2>
+                    <p>Travel dan wisata di Italia. kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+                <div class="package" id="jepang">
+                    <h2> Jepang</h2>
+                    <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+                <div class="package" id="singapore">
+                    <h2> Singapore</h2>
+                    <p>Travel dan wisata di Singapore. kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+            <div class="package-row">
+                <div class="package" id="prancis">
+                    <h2> Prancis</h2>
+                    <p>Travel dan wisata di Prancis. kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+                <div class="package" id="finlandia">
+                    <h2> Finlandia</h2>
+                    <p>Travel dan wisata di Finlandia. kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+                <div class="package" id="uk">
+                    <h2> UK</h2>
+                    <p>Travel dan wisata di UK. kunjungi cagar budaya dan kuliner yang menarik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="closing-argument">
+            <h2>Nikmati Liburan Impian Anda dengan Kami</h2>
+            <p>Jelajahi destinasi-destinasi terbaik dunia bersama kami. Paket perjalanan kami dirancang khusus untuk memberikan Anda pengalaman liburan yang tak terlupakan.</p>
+            <a href="#" class="cta-button">CALL TO ACTION</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 myTravel. All rights reserved.</p>
+    </footer>
 </body>
 </html>
