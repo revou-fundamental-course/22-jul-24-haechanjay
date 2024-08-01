@@ -1,0 +1,442 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f4f4f4;
+}
+.slideshow-container {
+    display: flex;
+    flex-direction: row; 
+    overflow: hidden; 
+    width: 100%;
+    max-width: 500px;
+    height: 300px; /* Atur tinggi sesuai kebutuhan */
+    margin: auto;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.slides {
+    display: flex;
+    width: 100%; 
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* Each slide should take up 100% of container width */
+    box-sizing: border-box;
+}
+
+.img .slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* Optional: Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 10px;
+    padding:7px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.active-slide {
+            display: block;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4; } 
+    to { opacity: 1; }
+}
+.header-wrapper{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.page {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.page h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.page p {
+    font-size: 1.2em;
+    color: #666;
+}
+h2{
+    font-size: 18px;
+    color:grey;
+}
+* {box-sizing: border-box;}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.packages {
+    text-align: center;
+    padding: 20px;
+}
+
+.package-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+}
+
+.package {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250vw;
+}
+
+.package::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional: for better readability */
+    border-radius: 10px;
+}
+
+.package h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.package p {
+    font-size: 1em;
+}
+
+#jepang {
+    background-image: url('https://images.unsplash.com/photo-1610894377860-d73415b792b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8amVwYW5nfGVufDB8fDB8fHww');
+}
+
+#uk {
+    background-image: url('https://media.istockphoto.com/id/547499548/photo/big-ben-and-westminster-bridge-at-sunset.webp?b=1&s=170667a&w=0&k=20&c=cTM51AKuVmpYZLY7AuF3Z7Ore86Cj3ODkSh0p58u7Cs=');
+}
+
+#singapore {
+    background-image: url('https://media.istockphoto.com/id/1482780802/photo/marina-bay-in-the-evening-singapore.webp?b=1&s=170667a&w=0&k=20&c=jkgagg3B1goIHgFSwF_nFvVw7QXQQu5QsfZQLbtbTsU=');
+}
+
+#finlandia {
+    background-image: url('https://media.istockphoto.com/id/1248298011/photo/aerial-view-of-park-in-central-helsinki-finland-in-picture-toollonlahden-park-finlandia-hall.webp?b=1&s=170667a&w=0&k=20&c=90Zh8mFvhxZlEFpystYtqg5hFOhUUZSTNWYroYy8yiw=');
+}
+
+#italia {
+    background-image: url('https://media.istockphoto.com/id/2160417739/photo/colorful-landscape-view-of-vernazza-on-sunset-in-cinque-terre-liguria-italia.webp?b=1&s=170667a&w=0&k=20&c=A2iLy9D1dddjVwp-X9_ErayW6x_Q-sXlLf1gxfH0BO8=');
+}
+#prancis{
+    background-image: url('https://images.unsplash.com/photo-1549144511-f099e773c147?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZyYW5jZXxlbnwwfHwwfHx8MA%3D%3D')
+}
+
+@media (max-width: 768px) {
+    .package {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .package{
+        width: 100%;
+    }
+}
+
+
+
+.left-section, .right-section {
+    width: 48%;
+}
+
+.testimonial {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.testimonial p {
+    font-style: italic;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.featurtes{
+    counter-reset: item;
+    list-style-type: none;
+}
+.features li:before {
+    content: counter(item);
+    counter-increment: item;
+    background:gold;
+    color: black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 10px;
+}
+
+.right-section {
+    padding: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section h2 {
+    margin-top: 0;
+}
+
+.right-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.right-section form input, 
+.right-section form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.right-section form button {
+    padding: 10px;
+    background-color:#333    ;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.right-section form button:hover {
+    background-color: #555;
+}
+.closing-argument {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4; /* Warna background section */
+}
+
+.closing-argument h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333; /* Warna teks headline */
+}
+
+.closing-argument p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #666; /* Warna teks paragraf */
+}
+
+.closing-argument .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333; /* Warna background tombol */
+    color: #fff; /* Warna teks tombol */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.closing-argument .cta-button:hover {
+    background-color: #555; /* Warna background tombol saat hover */
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f8f8f8; /* Warna latar belakang footer */
+    color: #666; /* Warna teks copyright */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+@media only screen and (max-width:600px) {
+    .header-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .page {   
+    display: flex;
+    flex-direction: column;
+    }
+    .page > p {
+        margin-bottom: 0%;
+    }
+    .page > h2 {
+        margin-top: 0%;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .slide{
+        width:100%;
+        height:100%;
+    }
+    .slideshow-container{
+        flex-direction: column;
+        width: 90vw;
+        height: 30vh;
+    }
+    .dot {
+        width: 90vw;
+    }
+
+    
+}
