@@ -14,7 +14,7 @@ let slideIndex = 0;
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 3000); // Ubah gambar setiap 3 detik
+        setTimeout(showSlides, 3000); 
     }
     function plusSlides(n) {
         slideIndex += n - 1;
@@ -49,8 +49,6 @@ let slideIndex = 0;
             errorMessage.innerHTML = "Please enter a valid email address.";
             return false;
         }
-    
-        // If all validations pass
         return true;
     }
     
