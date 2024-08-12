@@ -302,9 +302,6 @@ h1{
         width: 100%;
     }
 }
-
-
-
 .left-section, .right-section {
     width: 48%;
 }
@@ -432,4 +429,15 @@ footer {
 
 footer p {
     margin: 0;
+}
+@media (max-width: 425px) {
+    .left-section{
+        width: 100%;
+    }
+    .right-section{
+        width: 100%;
+    }
+    .package-row{
+        flex-direction: column;
+    }
 }
